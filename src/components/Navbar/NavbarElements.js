@@ -3,20 +3,17 @@ import { List } from "phosphor-react";
 import { NavLink as Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
-  background: #000;
+  position: sticky;
+  background: var(--background-footer);
   height: 80px;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
-
-  /* Third Nav */
-  /* justify-content: flex-start; */
-
 `;
 
 export const NavLink = styled(Link)`
-  color: #fff;
+  color: var(--cor-secundaria);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -25,27 +22,47 @@ export const NavLink = styled(Link)`
   cursor: pointer;
 
   &.active {
-    color: #15cdfc;
+    color: var(--cor-primaria);
     transition: all 0.2s ease-in-out;
   }
-  &:hover {
-    opacity: 0.8;
-    transition: all 0.2s ease-in-out;
+  
+  
+  @media screen and (max-width: 768px) {
+
+
+    img{
+      transition: none;
+      display: block;
+      
+      width:  ${(props) => props.hamburguer == true ? "150px" : "75px"};
+      height: auto;
+
+      position:  ${(props) => props.hamburguer == true ? "fixed" : "relative"};;
+      top: ${(props) => props.hamburguer == true ? "1rem" : "none"};
+      left: ${(props) => props.hamburguer == true ? "50%" : "none"};
+      transform:  ${(props) => props.hamburguer == true ? "translate(-48%, 100%)" : "none"};
+     
+      
+      filter: ${(props) => props.hamburguer == true ? "drop-shadow(0px 0px 12px var(--cor-primaria))" : "none"};
+      font-size: 1.8rem;
+      z-index: 12;
+      
+    }
   }
 `;
 
 export const Bars = styled(List)`
   display: none;
-  color: #fff;
-
+  color: var(--cor-secundaria);
+  cursor: pointer;
+  
   @media screen and (max-width: 768px) {
     display: block;
-    position: absolute;
-    top: 0;
+    position: ${(props) => props.hamburguer == true ? "fixed" : "relative"};
     right: 0;
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
-    cursor: pointer;
+    z-index: 12;
   }
 `;
 
@@ -54,15 +71,22 @@ export const NavMenu = styled.div`
   align-items: center;
   margin-right: -24px;
 
-  /* Second Nav */
-  /* margin-right: 24px; */
-
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
-
   @media screen and (max-width: 768px) {
-    display: none;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: none;
+    gap: 2rem;
+    
+    position: fixed;
+    display:  ${(props) => props.hamburguer == true ? "flex" : "none"};
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s;
+
+    background-color: var(--background-footer); 
+    font-size: 2rem;
+
+    z-index: 11;
   }
 `;
 
@@ -71,32 +95,33 @@ export const NavBtn = styled.nav`
   align-items: center;
   margin-right: 24px;
 
-  /* Third Nav */
-  /* justify-content: flex-end;
-  width: 100vw; */
-
   @media screen and (max-width: 768px) {
-    display: none;
+    display: ${(props) => props.hamburguer == true ? "flex" : "none"};;
+    z-index: 14;
+    position: fixed;
+    bottom: 5rem;
+    left: 50% ;
+    font-size: 1.5rem;
+    transform: translate(-50%, -50%);
   }
 `;
 
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
-  background: #256ce1;
-  padding: 10px 22px;
-  color: #fff;
+  background: var(--cor-complementar-1);
+  padding: 0.750rem 1.5rem;
+  color: var(--cor-secundaria);
   outline: none;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-
-  /* Second Nav */
   margin-left: 24px;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: var(--cor-secundaria);
+    color: var(--background-footer);
   }
+
 `;

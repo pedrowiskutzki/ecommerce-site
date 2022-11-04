@@ -3,8 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter } from 'react-router-dom';
 import { Router } from './routes/router';
-import React from "react";
-import Footer from "./Footer/index";
+import Footer from "./components/Footer";
 import { GlobalStyle } from "./styles/global";
 
 export function App() {

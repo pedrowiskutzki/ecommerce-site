@@ -26,7 +26,13 @@ export const Column = styled.div`
   flex-wrap: wrap;
   padding: 2rem;
   text-align: center;
-  
+
+  @media screen and (max-width: 899px) {
+    :last-child{
+      flex-direction: row;
+      min-height: fit-content;
+    }
+  }
 `;
    
 export const Row = styled.div`
@@ -43,12 +49,22 @@ export const FooterLink = styled.a`
   opacity: 0.7;
   font-size: 18px;
   text-decoration: none;
-   
+  transition: 0.5s ease-in-out;
+ 
   &:hover {
       color: var(--cor-secundaria);
-      transition: 0.5s ease-in-out;
       opacity: 1;
   }
+
+  i{
+    font-size: 2rem;
+    :hover{
+      color: var(--cor-primaria);
+      opacity: 1;
+      transition: 0.5s ease-in-out;
+    }
+  }
+   
 `;
 
 export const Heading = styled.p`

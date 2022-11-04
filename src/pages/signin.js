@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Services = () => {
+export const SignIn = () => {
   return (
     <div
       style={{
@@ -10,7 +10,7 @@ export const Services = () => {
         height: '90vh'
       }}
     >
-      <h1>Services</h1>
+      <h1>Sign in</h1>
     </div>
   );
 };

@@ -14,11 +14,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "var(--cor-complementar-1)", 
-                   textAlign: "center", 
-                   marginTop: "10px" }}>
-        ECOMMERCE - GRUPO 4
-      </h1>
+      
       <Container>
         <Row>
           <Column> 
@@ -35,7 +31,7 @@ const Footer = () => {
             <FooterLink href="#">Solução de problemas</FooterLink>
           </Column> 
           <Column>
-            <Heading>Redes Sociais</Heading>
+            
             <FooterLink href="#">
                 <i className="FaFacebook">
                     <span style={{ marginLeft: "10px" }}>

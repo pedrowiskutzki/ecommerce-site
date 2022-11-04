@@ -9,41 +9,34 @@ import {
   NavBtnLink
 } from './NavbarElements';
 
-function Menu(){
-  render(){
-    const [hamburguer, setHamburguer] = useState(true);
-    const toggleHamburguer = (hamburguer) => {
-      hamburguer = !hamburguer;
-      console.log(hamburguer)
-    }
-  }
-  }
+
 
 const Navbar = () => {
-  const Menu = new Menu();
+  const [hamburguer, setHamburguer] = useState(false);
+  const toggleHamburguer = () => {
+    setHamburguer(!hamburguer);
+    console.log(hamburguer)
+  }
+  const closeeHamburguer = () => {
+    setHamburguer(false);
+    console.log(hamburguer)
+  }
+
   return (
     <>
       <Nav>
-        <NavLink to='/'>
-          <img src={require('../../images/logo192.png')} width="40px" heigth="40px" alt='logo' />
+        <NavLink onClick={() => closeeHamburguer()} hamburguer={hamburguer} to='/'>
+          <img src={require('../../images/logo-white.png')} width="75x" heigth="75px" alt='logo' />
         </NavLink>
-        <Bars onClick={() => {Menu.}}/>
-        <NavMenu>
-          <NavLink to='/about'>
-            About
-          </NavLink>
-          <NavLink to='/service'>
-            Services
-          </NavLink>
-          <NavLink to='/contact-us'>
-            Contact Us
-          </NavLink>
-          <NavLink to='/sign-up'>
-            Sign Up
-          </NavLink>
+        <Bars onClick={() => toggleHamburguer()} hamburguer={hamburguer}/>
+        <NavMenu hamburguer={hamburguer}>
+          <NavLink onClick={() => closeeHamburguer()} to='/about'>Sobre</NavLink>
+          <NavLink onClick={() => closeeHamburguer()} to='/services'>Serviços</NavLink>
+          <NavLink onClick={() => closeeHamburguer()} to='/contact-us'>Contato</NavLink>
+          <NavLink onClick={() => closeeHamburguer()} to='/sign-up'>Criar Conta</NavLink>
         </NavMenu>
-        <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+        <NavBtn hamburguer={hamburguer}>
+          <NavBtnLink onClick={() => closeeHamburguer()} to='/sign-in'>Acessar</NavBtnLink>
         </NavBtn>
       </Nav>
     </>
