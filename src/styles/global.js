@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Arial, Helvetica, sans-serif;
 
     //Variáveis de cores
-    --cor-primaria: #2e9ec8;
+    --cor-primaria: #15cdfc;
     --cor-secundaria: #fff;
     --cor-complementar-1: #2673a6 ;
     --background-footer: #1f1f1f;

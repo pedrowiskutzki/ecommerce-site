@@ -1,0 +1,46 @@
+import React from 'react';
+import { useState } from 'react';
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+  NavBtn,
+  NavBtnLink
+} from './NavbarElements';
+
+
+
+const Navbar = () => {
+  const [hamburguer, setHamburguer] = useState(false);
+  const toggleHamburguer = () => {
+    setHamburguer(!hamburguer);
+    console.log(hamburguer)
+  }
+  const closeeHamburguer = () => {
+    setHamburguer(false);
+    console.log(hamburguer)
+  }
+
+  return (
+    <>
+      <Nav>
+        <NavLink onClick={() => closeeHamburguer()} hamburguer={hamburguer} to='/'>
+          <img src={require('../../images/logo-white.png')} width="75x" heigth="75px" alt='logo' />
+        </NavLink>
+        <Bars onClick={() => toggleHamburguer()} hamburguer={hamburguer}/>
+        <NavMenu hamburguer={hamburguer}>
+          <NavLink onClick={() => closeeHamburguer()} to='/about'>Sobre</NavLink>
+          <NavLink onClick={() => closeeHamburguer()} to='/services'>Serviços</NavLink>
+          <NavLink onClick={() => closeeHamburguer()} to='/contact-us'>Contato</NavLink>
+          <NavLink onClick={() => closeeHamburguer()} to='/sign-up'>Criar Conta</NavLink>
+        </NavMenu>
+        <NavBtn hamburguer={hamburguer}>
+          <NavBtnLink onClick={() => closeeHamburguer()} to='/sign-in'>Acessar</NavBtnLink>
+        </NavBtn>
+      </Nav>
+    </>
+  );
+};
+
+export default Navbar;
