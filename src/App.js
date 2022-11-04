@@ -1,6 +1,6 @@
 import { Header } from "./header";
 import React from "react";
-import Footer from "./components/index";
+import Footer from "./Footer/index";
 import { GlobalStyle } from "./styles/global";
 
 export function App() {
