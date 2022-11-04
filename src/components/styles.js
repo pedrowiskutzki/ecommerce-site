@@ -1,74 +1,61 @@
 import styled from 'styled-components';
    
 export const Box = styled.div`
-  padding: 5px 5px;
-  background: seagreen;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  
-     
-  @media (max-width: 1024px) {
-    flex-wrap: nowrap;
-  }
+  background: var(--background-footer);
+  position: relative;
+  max-width: 100%;
+  padding: 1rem 0rem;
+  margin: auto;
 `;
    
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    /* background: red; */
-   
-    @media (max-width: 1024px) {
+    text-align: center;
     flex-wrap: wrap;
-    
-  }
-
 `
    
 export const Column = styled.div`
   display: flex;
+  gap: 1rem;
   flex-direction: column;
   text-align: right;
-  margin-left: 60px;
-
-  @media (max-width: 1024px) {
-    flex-wrap: wrap;
-    width: 100%;
-  }
+  min-height: 280px;
+  min-width: 300px;
+  flex-wrap: wrap;
+  padding: 2rem;
+  text-align: center;
   
 `;
    
 export const Row = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 
-                         minmax(185px, 1fr));
-  grid-gap: 20px;
-   
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, 
-                           minmax(200px, 1fr));
-  }
+  display: flex;
+  height: fit-content;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
    
 export const FooterLink = styled.a`
-  color: #fff;
-  margin-bottom: 20px;
+  color: var(--cor-secundaria);
+  opacity: 0.7;
   font-size: 18px;
   text-decoration: none;
    
   &:hover {
-      color: green;
-      transition: 200ms ease-in;
+      color: var(--cor-secundaria);
+      transition: 0.5s ease-in-out;
+      opacity: 1;
   }
 `;
 
 export const Heading = styled.p`
+  text-align: center;
   font-size: 24px;
-  color:#FFFF00;
-  margin-bottom: 40px;
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
   font-weight: bold;
 `;
 

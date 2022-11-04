@@ -14,7 +14,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "Red", 
+      <h1 style={{ color: "var(--cor-complementar-1)", 
                    textAlign: "center", 
                    marginTop: "10px" }}>
         ECOMMERCE - GRUPO 4
