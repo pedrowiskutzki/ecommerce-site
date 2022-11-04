@@ -1,11 +1,15 @@
-import { Header } from "./header/index.js";
+import React from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import { BrowserRouter } from 'react-router-dom';
+import { Router } from './routes/router';
 
 export function App() {
   return (
-    <div className="App">
-      <Header/>
-    </div>
+    <BrowserRouter> 
+        <Navbar/>
+      <Router>
+      </Router>
+    </BrowserRouter>
   );
 }
-
-
