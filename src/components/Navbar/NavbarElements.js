@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Plus } from "phosphor-react";
+import { List } from "phosphor-react";
 import { NavLink as Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
@@ -34,7 +34,7 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const Bars = styled(Plus)`
+export const Bars = styled(List)`
   display: none;
   color: #fff;
 
