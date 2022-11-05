@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Contact = () => {
+export const Computing = () => {
   return (
     <div
       style={{
@@ -10,7 +10,7 @@ export const Contact = () => {
         height: '90vh'
       }}
     >
-      <h1>Contact Us</h1>
+      <h1>Informática</h1>
     </div>
   );
 };
