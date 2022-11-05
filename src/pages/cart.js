@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const SignUp = () => {
+export const Cart = () => {
   return (
     <div
       style={{
@@ -10,7 +10,7 @@ export const SignUp = () => {
         height: '90vh'
       }}
     >
-      <h1>Sign Up</h1>
+      <h1>Carrinho</h1>
     </div>
   );
 };

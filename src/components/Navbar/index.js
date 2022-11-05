@@ -30,10 +30,10 @@ const Navbar = () => {
         </NavLink>
         <Bars onClick={() => toggleHamburguer()} hamburguer={hamburguer}/>
         <NavMenu hamburguer={hamburguer}>
-          <NavLink onClick={() => closeeHamburguer()} to='/about'>Sobre</NavLink>
-          <NavLink onClick={() => closeeHamburguer()} to='/services'>Serviços</NavLink>
-          <NavLink onClick={() => closeeHamburguer()} to='/contact-us'>Contato</NavLink>
-          <NavLink onClick={() => closeeHamburguer()} to='/sign-up'>Criar Conta</NavLink>
+          <NavLink onClick={() => closeeHamburguer()} to='/computing'>Informática</NavLink>
+          <NavLink onClick={() => closeeHamburguer()} to='/office'>Escritório</NavLink>
+          <NavLink onClick={() => closeeHamburguer()} to='/bookstore'>Livraria</NavLink>
+          <NavLink onClick={() => closeeHamburguer()} to='/cart'>Carrinho</NavLink>
         </NavMenu>
         <NavBtn hamburguer={hamburguer}>
           <NavBtnLink onClick={() => closeeHamburguer()} to='/sign-in'>Acessar</NavBtnLink>
