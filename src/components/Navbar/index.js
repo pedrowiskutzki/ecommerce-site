@@ -36,7 +36,7 @@ const Navbar = () => {
           <NavLink onClick={() => closeeHamburguer()} to='/cart'>Carrinho</NavLink>
         </NavMenu>
         <NavBtn hamburguer={hamburguer}>
-          <NavBtnLink onClick={() => closeeHamburguer()} to='/sign-in'>Acessar</NavBtnLink>
+          <NavBtnLink onClick={() => closeeHamburguer()} to='/login'>Login</NavBtnLink>
         </NavBtn>
       </Nav>
     </>
