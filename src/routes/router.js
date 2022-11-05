@@ -1,4 +1,4 @@
-import AuthContext from "../context/auth";
+// import AuthContext from "../context/auth";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "../pages/Home/index";
 import { Computing } from "../pages/computing";
@@ -7,18 +7,20 @@ import { Bookstore } from "../pages/bookstore";
 import { Cart } from "../pages/cart";
 import { Login } from "../pages/Login/index";
 import { Registration } from "../pages/Registration/index";
-import { useContext } from "react";
+// import { useContext } from "react";
 
 export function Router() {
-    //Validação de Login não permite acessar as outras areas sem autenticação
-    const { isAuthenticated } = useContext(AuthContext);
-    if (!isAuthenticated) {
-        return (
-            <Routes>
-                <Route path="/" element={<Login />} />
-            </Routes>
-        );
-    }
+
+    // //Validação de Login não permite acessar as outras areas sem autenticação
+    // const { isAuthenticated } = useContext(AuthContext);
+    // if (!isAuthenticated) {
+    //     return (
+    //         <Routes>
+    //             <Route path="/" element={<Login />} />
+    //         </Routes>
+    //     );
+    // }
+
     return (
         <Routes>
             <Route path="/" element={<Home />} />
