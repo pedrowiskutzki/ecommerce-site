@@ -1,13 +1,13 @@
-import { useContext } from "react"
-import AuthContext from '../../context/auth'
+import { useContext } from "react";
+import AuthContext from "../../context/auth";
 
 export function Home() {
-    const { signOut, userName } = useContext(AuthContext)
-    
+    const { signOut, userName } = useContext(AuthContext);
+
     return (
         <div>
-            <h1>Ola {userName}</h1>
+            <h1>Ola, {userName}</h1>
             <button onClick={() => signOut()}>Sair</button>
         </div>
-    )
+    );
 }
