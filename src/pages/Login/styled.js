@@ -20,25 +20,47 @@ export const Container = styled.div`
     }
     input{
         margin-top: 1rem;
+        min-width: 200px;
+
         border:solid 2px var(--cor-primaria);
         border-radius: 5px;
-        padding: 4px 8px;
-        min-width: 200px;
+        background-color: white;
+
+        font-size: 0.875rem;
+        font-weight: bold;
+        color: var(--cor-secundaria);
+        opacity: 0.9;
+        padding: 8px 16px;
         cursor: pointer;
         box-shadow: 0px 0px 8px  var(--cor-complementar-1);
+
+        :active, :focus{
+            border: none;
+        }
+
+        ::placeholder{
+            opacity: 0.3;
+            color: black;
+        }
     }
 
     button{
-        color: var(--cor-secundaria);
+        border: none;
+        border-radius: 4px;
+        font-size: 1.25rem;
+
         margin-top: 2rem;
-        border-radius: 6px;
-        padding: 4px 12px; 
+        padding: 8px 12px; 
+
+        color: var(--cor-secundaria);
         background-color: var(--cor-complementar-1);
-        cursor: pointer;
+
         transition: 0.5s ease-in-out;
+        cursor: pointer;
     
         :hover{
             background-color: var(--cor-primaria);
+            filter:drop-shadow(0px 0px 8px var(--cor-primaria));
         }
     }
     

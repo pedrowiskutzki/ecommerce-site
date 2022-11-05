@@ -20,12 +20,15 @@ export const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
   &.active {
     color: var(--cor-primaria);
-    transition: all 0.2s ease-in-out;
   }
   
+  :hover{
+    opacity: 0.8;
+  }
   
   @media screen and (max-width: 768px) {
 
@@ -34,16 +37,16 @@ export const NavLink = styled(Link)`
       transition: none;
       display: block;
       
-      width:  ${(props) => props.hamburguer == true ? "150px" : "75px"};
+      width:  ${(props) => props.hamburguer === true ? "150px" : "75px"};
       height: auto;
 
-      position:  ${(props) => props.hamburguer == true ? "fixed" : "relative"};;
-      top: ${(props) => props.hamburguer == true ? "1rem" : "none"};
-      left: ${(props) => props.hamburguer == true ? "50%" : "none"};
-      transform:  ${(props) => props.hamburguer == true ? "translate(-48%, 100%)" : "none"};
+      position:  ${(props) => props.hamburguer === true ? "fixed" : "relative"};;
+      top: ${(props) => props.hamburguer === true ? "1rem" : "none"};
+      left: ${(props) => props.hamburguer === true ? "50%" : "none"};
+      transform:  ${(props) => props.hamburguer === true ? "translate(-48%, 100%)" : "none"};
      
       
-      filter: ${(props) => props.hamburguer == true ? "drop-shadow(0px 0px 12px var(--cor-primaria))" : "none"};
+      filter: ${(props) => props.hamburguer === true ? "drop-shadow(0px 0px 12px var(--cor-primaria))" : "none"};
       font-size: 1.8rem;
       z-index: 12;
       
@@ -58,7 +61,7 @@ export const Bars = styled(List)`
   
   @media screen and (max-width: 768px) {
     display: block;
-    position: ${(props) => props.hamburguer == true ? "fixed" : "relative"};
+    position: ${(props) => props.hamburguer === true ? "fixed" : "relative"};
     right: 0;
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
@@ -78,7 +81,7 @@ export const NavMenu = styled.div`
     gap: 2rem;
     
     position: fixed;
-    display:  ${(props) => props.hamburguer == true ? "flex" : "none"};
+    display:  ${(props) => props.hamburguer === true ? "flex" : "none"};
     justify-content: center;
     flex-direction: column;
     transition: 0.5s;
@@ -96,7 +99,7 @@ export const NavBtn = styled.nav`
   margin-right: 24px;
 
   @media screen and (max-width: 768px) {
-    display: ${(props) => props.hamburguer == true ? "flex" : "none"};;
+    display: ${(props) => props.hamburguer === true ? "flex" : "none"};;
     z-index: 14;
     position: fixed;
     bottom: 5rem;
