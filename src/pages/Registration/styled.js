@@ -16,6 +16,7 @@ export const Container = styled.div`
     h1{
         color:var(--cor-primaria);
         margin-bottom: 6px;
+
     }
 
     input{
@@ -41,26 +42,6 @@ export const Container = styled.div`
         ::placeholder{
             opacity: 0.3;
             color: var(--cor-complementar-2);
-        }
-    }
-
-    button{
-        border: none;
-        border-radius: 4px;
-        font-size: 1.25rem;
-
-        margin: 2rem 0rem;
-        padding: 8px 12px; 
-
-        color: var(--cor-secundaria);
-        background-color: var(--cor-complementar-1);
-
-        transition: 0.5s ease-in-out;
-        cursor: pointer;
-    
-        :hover{
-            background-color: var(--cor-primaria);
-            filter:drop-shadow(0px 0px 8px var(--cor-primaria));
         }
     }
 
@@ -98,12 +79,14 @@ export const Container = styled.div`
                 color: var(--cor-primaria);
                 filter: none;
             }
+
+
         }
     }
-
     p{
         color: var(--cor-secundaria);
         font-size: 0.875rem;
+        text-align: center;
     }
     
     img{

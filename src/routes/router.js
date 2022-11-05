@@ -6,6 +6,7 @@ import { Office } from "../pages/office";
 import { Bookstore } from "../pages/bookstore";
 import { Cart } from "../pages/cart";
 import { Login } from "../pages/Login/index";
+import { Registration } from "../pages/Registration/index";
 import { useContext } from "react";
 
 export function Router() {
@@ -26,6 +27,7 @@ export function Router() {
             <Route path="/bookstore" element={<Bookstore />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/registration" element={<Registration />} />
         </Routes>
     );
 }
