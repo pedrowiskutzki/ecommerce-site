@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     --cor-secundaria: #fff;
     --cor-complementar-1: #2673a6 ;
     --cor-complementar-2: #292929;
+    --cor-vermelho: #bf5349;
     --background-footer: #1f1f1f;
   }
  
