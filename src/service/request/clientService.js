@@ -19,11 +19,11 @@ const update = (id, data) => {
 const remove = (id) => {
     return api.delete(`cliente/${id}`);
 };
-const clienteService = {
+const clientService = {
     getAll,
     get,
     create,
     update,
     remove,
 };
-export default clienteService;
+export default clientService;
