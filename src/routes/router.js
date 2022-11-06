@@ -4,7 +4,7 @@ import { Home } from "../pages/Home/index";
 import { Computing } from "../pages/computing";
 import { Office } from "../pages/office";
 import { Bookstore } from "../pages/bookstore";
-import { Cart } from "../pages/Cart";
+import { Cart } from "../pages/Cart/index";
 import { Login } from "../pages/Login/index";
 import { Registration } from "../pages/Registration/index";
 import { useContext } from "react";
