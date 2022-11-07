@@ -37,7 +37,7 @@ export function Registration() {
 
     return (
         <Container onSubmit={handleSubmit}>
-                <img src={require("../../images/logo-white.png")} />
+                <img src={require("../../images/logo-white.png")} alt='Logo - Representada por um homem andando com um carrinho de compras em cima do nome da empresa "O Wall-Line"'/>
                 <h1>Cadastro</h1>
                
                 <input required="true" placeholder="Digite seu nome" name="nome" onChange={(e) => setNome(e.target.value)} />
@@ -46,6 +46,10 @@ export function Registration() {
                 <input required ="true" placeholder="Confirme sua senha" name="passwordCheck" type="password" onChange={(e) => setPasswordCheck(e.target.value)}/>
                 
                 <button type="submit">Criar Conta</button>
+                <p>
+                    Já possui uma conta?
+                    <a href="/login">Entrar</a>
+                </p>
         </Container>
     );
 }
