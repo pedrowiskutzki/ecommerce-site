@@ -22,22 +22,22 @@ export const NavLink = styled(Link)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
-  &.active {
-    color: var(--cor-primaria);
-  }
-  
+
   :hover, :focus{
+    color: var(--cor-secundaria);
     opacity: 0.8;
   }
   
-  :first-child{
-    :hover, :focus{
+  &.active {
+    color: var(--cor-primaria);
     opacity: 1;
   }
-  }
+
+ :first-child{
+  opacity: 1;
+ }
 
   @media screen and (max-width: 768px) {
-
 
     img{
       transition: none;
@@ -55,7 +55,6 @@ export const NavLink = styled(Link)`
       filter: ${(props) => props.hamburguer === true ? "drop-shadow(0px 0px 12px var(--cor-primaria))" : "none"};
       font-size: 1.8rem;
       z-index: 12;
-      
     }
   }
 `;
@@ -97,6 +96,14 @@ export const NavMenu = styled.div`
 
     z-index: 11;
   }
+  #firstLink{
+  :hover{
+    opacity: 0.8;
+  }
+  :focus{
+    opacity: 1;
+  }
+ }
 `;
 
 export const NavBtn = styled.nav`

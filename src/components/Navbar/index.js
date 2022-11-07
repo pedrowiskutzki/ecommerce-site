@@ -57,7 +57,7 @@ const Navbar = () => {
         </NavLink>
         <Bars onClick={() => toggleHamburguer()} hamburguer={hamburguer}/>
         <NavMenu hamburguer={hamburguer}>
-          <NavLink onClick={() => closeeHamburguer()} to='/computing'>Informática</NavLink>
+          <NavLink id='firstLink' onClick={() => closeeHamburguer()} to='/computing'>Informática</NavLink>
           <NavLink onClick={() => closeeHamburguer()} to='/office'>Escritório</NavLink>
           <NavLink onClick={() => closeeHamburguer()} to='/bookstore'>Livraria</NavLink>
           <NavLink onClick={() => closeeHamburguer()} to='/cart'>Carrinho</NavLink>
