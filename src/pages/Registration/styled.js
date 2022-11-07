@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.form`
     background-color: var(--background-footer);
     display: flex;
     padding: 4rem 2rem;
@@ -75,7 +75,7 @@ export const Container = styled.div`
             
             color: var(--cor-complementar-1);
             background-color: var(--background-footer);
-            :hover{
+            :hover, :focus{
                 color: var(--cor-primaria);
                 filter: none;
             }
@@ -95,6 +95,26 @@ export const Container = styled.div`
         margin-bottom: 3rem;
         filter:drop-shadow(0px 0px 12px var(--cor-primaria));
 
+    }
+
+    button{
+        border: none;
+        border-radius: 4px;
+        font-size: 1.25rem;
+
+        margin: 2rem 0rem;
+        padding: 8px 12px; 
+
+        color: var(--cor-secundaria);
+        background-color: var(--cor-complementar-1);
+
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+    
+        :hover, :focus{
+            background-color: var(--cor-primaria);
+            filter:drop-shadow(0px 0px 8px var(--cor-primaria));
+        }
     }
         
 `;

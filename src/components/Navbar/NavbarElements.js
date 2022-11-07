@@ -26,10 +26,16 @@ export const NavLink = styled(Link)`
     color: var(--cor-primaria);
   }
   
-  :hover{
+  :hover, :focus{
     opacity: 0.8;
   }
   
+  :first-child{
+    :hover, :focus{
+    opacity: 1;
+  }
+  }
+
   @media screen and (max-width: 768px) {
 
 
@@ -99,7 +105,7 @@ export const NavBtn = styled.nav`
   margin-right: 24px;
 
   @media screen and (max-width: 768px) {
-    display: ${(props) => props.hamburguer === true ? "flex" : "none"};;
+    display: ${(props) => props.hamburguer === true ? "flex" : "none"};
     z-index: 14;
     position: fixed;
     bottom: 5rem;
@@ -110,21 +116,34 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(Link)`
-  border-radius: 4px;
-  background: var(--cor-complementar-1);
-  padding: 0.750rem 1.5rem;
+  cursor: pointer;
   color: var(--cor-secundaria);
   outline: none;
   border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  margin-left: 24px;
 
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: var(--cor-secundaria);
-    color: var(--background-footer);
+  transition: all 0.2s ease-in-out;
+  margin-left: 24px;
+  text-decoration: none;
+  
+  :first-child{
+    display: ${(props) => props.isAuthenticated === true ? "none" : "flex"};
+    padding: 0.750rem 1.5rem;
+    border-radius: 4px;
+    background: var(--cor-complementar-1);
+
+    &:hover, :focus {
+      background: var(--cor-secundaria);
+      color: var(--background-footer);
+    }
   }
+  :last-child{
+    display: ${(props) => props.isAuthenticated === true ? "flex" : "none"};
+    background-color: var(--background-footer);
+    &:hover, :focus {
+      color: var(--cor-primaria);
+    }
+  }
+
+
 
 `;

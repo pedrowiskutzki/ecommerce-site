@@ -58,7 +58,7 @@ export const Container = styled.div`
         transition: 0.5s ease-in-out;
         cursor: pointer;
     
-        :hover{
+        :hover, :focus{
             background-color: var(--cor-primaria);
             filter:drop-shadow(0px 0px 8px var(--cor-primaria));
         }
@@ -79,7 +79,7 @@ export const Container = styled.div`
         transition: 0.5s ease-in-out;
         cursor: pointer;
     
-        :hover{
+        :hover, :focus{
             background-color: var(--cor-primaria);
             filter:drop-shadow(0px 0px 8px var(--cor-primaria));
         }
@@ -94,7 +94,7 @@ export const Container = styled.div`
             
             color: var(--cor-complementar-1);
             background-color: var(--background-footer);
-            :hover{
+            :hover, :focus{
                 color: var(--cor-primaria);
                 filter: none;
             }

@@ -7,7 +7,6 @@ export function Registration() {
     const { signIn } = useContext(AuthContext);
 
     const [nome, setNome] = useState("");
-    const [usuario, setUsuario] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [passwordCheck, setPasswordCheck] = useState("");
@@ -24,7 +23,6 @@ export function Registration() {
 
         const user = {
             nome: nome,
-            usuario: usuario,
             email: email,
             senha: senha,
             passwordCheck: passwordCheck,
@@ -39,51 +37,15 @@ export function Registration() {
 
     return (
         <Container onSubmit={handleSubmit}>
-            <div>
-                <h1>Criar conta</h1>
                 <img src={require("../../images/logo-white.png")} />
-                <form>
-                    <input placeholder="Digite seu nome" name="nome" onChange={(e) => setNome(e.target.value)} />
-                    <input
-                        placeholder="Digite seu apelido"
-                        name="usuario"
-                        onChange={(e) => setUsuario(e.target.value)}
-                    />
-                    <input placeholder="Digite seu e-mail" name="email" onChange={(e) => setEmail(e.target.value)} />
-                    <input placeholder="Digite sua senha" name="password" onChange={(e) => setSenha(e.target.value)} />
-                    <input
-                        placeholder="Confirme sua senha"
-                        name="passwordCheck"
-                        onChange={(e) => setPasswordCheck(e.target.value)}
-                    />
-                    <button type="submit">Add</button>
-                </form>
-            </div>
-            {/*  <h1>Criar conta</h1>
-
-            <input placeholder="Digite seu nome" name="nome" onChange={(e) => setNome(e.target.value)} />
-            <input placeholder="Digite seu e-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
-            <input
-                type="password"
-                placeholder="Digite sua senha"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <input
-                type="password"
-                placeholder="Confirme sua senha"
-                value={passwordCheck}
-                onChange={(e) => setPasswordCheck(e.target.value)}
-            />
-            <a onClick={"submit"} href="/">
-                {" "}
-                Continuar{" "}
-            </a>
-
-            <p>
-                Já possui uma conta?
-                <a href="/login">Entrar</a>
-            </p> */}
+                <h1>Cadastro</h1>
+               
+                <input required="true" placeholder="Digite seu nome" name="nome" onChange={(e) => setNome(e.target.value)} />
+                <input required="true" placeholder="Digite seu e-mail" name="email" type="email" onChange={(e) => setEmail(e.target.value)} />
+                <input required="true" placeholder="Digite sua senha" name="password" type="password" onChange={(e) => setSenha(e.target.value)} />
+                <input required ="true" placeholder="Confirme sua senha" name="passwordCheck" type="password" onChange={(e) => setPasswordCheck(e.target.value)}/>
+                
+                <button type="submit">Criar Conta</button>
         </Container>
     );
 }
