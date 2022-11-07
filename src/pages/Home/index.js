@@ -1,13 +1,16 @@
-import { useContext } from "react";
-import AuthContext from "../../context/auth";
+
+import { useContext } from "react"
+import AuthContext from '../../context/auth'
+import { CarouselContainer } from "../../components/Carousel"
 
 export function Home() {
     const { signOut, userName } = useContext(AuthContext);
 
     return (
-        <div>
-            <h1>Ola, {userName}</h1>
+        <>
+            <CarouselContainer/>
+            <h1 style={{marginBottom: "2rem"}}>Ola {userName}</h1>
             <button onClick={() => signOut()}>Sair</button>
-        </div>
+        </>
     );
 }
