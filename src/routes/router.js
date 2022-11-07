@@ -8,6 +8,7 @@ import { Cart } from "../pages/Cart/index";
 import { Login } from "../pages/Login/index";
 import { Registration } from "../pages/Registration/index";
 import { useContext } from "react";
+import { AboutUs, OurHistory } from "../pages/SobreNos/ourHistory";
 
 export function Router() {
     //Validação de Login não permite acessar as outras areas sem autenticação
@@ -22,6 +23,7 @@ export function Router() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/registration" element={<Registration />} />
+                <Route path="/ourHistory" element={<AboutUs />} />
             </Routes>
         );
     }
@@ -34,6 +36,7 @@ export function Router() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Home />} />
             <Route path="/registration" element={<Home />} />
+            <Route path="/ourHistory" element={<AboutUs />} />
         </Routes>
     );
 }
