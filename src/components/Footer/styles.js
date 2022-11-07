@@ -51,14 +51,14 @@ export const FooterLink = styled.a`
   text-decoration: none;
   transition: 0.5s ease-in-out;
  
-  &:hover {
+  &:hover, :focus {
       color: var(--cor-secundaria);
       opacity: 1;
   }
 
   i{
     font-size: 2rem;
-    :hover{
+    :hover, :focus{
       color: var(--cor-primaria);
       opacity: 1;
       transition: 0.5s ease-in-out;
