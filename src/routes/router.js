@@ -20,7 +20,7 @@ export function Router() {
                 <Route path="/office" element={<Office />} />
                 <Route path="/bookstore" element={<Bookstore />} />
                 {/* Direcionar o path de cart para a página de login, quando não autenticado */}
-                <Route path="/cart" element={<Cart />} />
+                <Route path="/cart" element={<Login />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/registration" element={<Registration />} />
             </Routes>
