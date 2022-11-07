@@ -4,20 +4,18 @@ import  Carousel  from 'react-bootstrap/Carousel';
 import { Container, Content } from "./styled";
 
 
+
 export const CarouselContainer = () => {
   return (
     <Container>
-      <div style={{ display: 'block', width: "900px", height: "300px", padding: "20px", marginBottom: "2rem"}}>
+      <div style={{ display: 'block', maxWidth: 900, Maxheigth:200, padding: 30, marginBottom:"2rem"}}>
         <Content>
-          <Carousel fade>
+          <Carousel fade variant="ligth" >
             <Carousel.Item interval={1300}>
               <img className="d-block w-100" 
                 src={require('../../images/carousel/BannerBlack.png')}
                 alt="Image One"
               />
-            <Carousel.Caption>
-                <h4></h4>
-            </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={1300}>
               <a
@@ -28,7 +26,6 @@ export const CarouselContainer = () => {
                 src={require('../../images/carousel/BannerInfor.png')}
               />
               </a>
-              <Carousel.Caption><h4></h4></Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={1300}>
               <a
@@ -40,7 +37,6 @@ export const CarouselContainer = () => {
                 alt="Image Three"
               />
               </a>
-              <Carousel.Caption><h4></h4></Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={1300}>
               <a
@@ -52,26 +48,23 @@ export const CarouselContainer = () => {
                 alt="Image four"
               />
               </a>
-              <Carousel.Caption><h4></h4></Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={1300}>
               <img className="d-block w-100" 
                 src={require('../../images/carousel/BannerSuper.png')}
                 alt="Image five"
               />
-              <Carousel.Caption><h4></h4></Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={1300}>
               <a
                 href="/registration"
-                target="_blank"
+                target=""
               >
               <img className="d-block w-100" 
                 src={require('../../images/carousel/BannerCad.png')}
                 alt="Image six"
               />
               </a>
-              <Carousel.Caption><h4></h4></Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </Content>
