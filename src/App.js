@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 import { Router } from "./routes/router";
 import Footer from "./components/Footer";
 import { GlobalStyle } from "./styles/global";
-import { CarouselContainer } from './components/Carousel';
 
 export function App() {
     return (
