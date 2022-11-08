@@ -37,9 +37,10 @@ export const ProductCard = styled.div`
 
 export const ProductInfo = styled.div`
     img{
-        min-height: 120px;
-        max-height: 120px;
-        max-width: 120px;
+        max-width:140px;
+        max-height:120px;
+        width: auto;
+        height: auto;
         border-radius: 6px;
         margin: 0.5rem 0rem;
     }
@@ -127,7 +128,7 @@ export const OrderInfo = styled.div`
             background-color: var(--cor-primaria);
             color: var(--cor-secundaria);
 
-            :hover{
+            :focus, :hover{
                 background-color: var(--cor-complementar-1);
             }
         }
@@ -145,8 +146,8 @@ export const RemoveProduct = styled.button`
     border-radius: 6px;
     color: var(--cor-secundaria);
     padding: 0.5rem;
-    transition: 0.5s ease-in-out;
-    :hover{
+    transition: 0.3s ease-in-out;
+    :focus, :hover{
         background-color: var(--cor-vermelho);
     }
 `;
@@ -155,14 +156,14 @@ export const LastSteps = styled.div`
     text-align: center;
 
     h3{
-        transition: 0.3s ease-in-out;
         display: inline-flex;
         padding: 0.75rem 1.5rem;
         border-radius: ${(props) => props.disapear == true ? "50px" : "50px 0px 0px  50px"};
 
         font-size: ${(props) => props.disapear == true ? "2rem" : "1rem"};
-        background-color: var(--cor-complementar-2);
-        color: var(--cor-secundaria);
+        background-color: ${(props) => props.disapear == true ? "none" : "var(--cor-complementar-2)"};
+        color: ${(props) => props.disapear == true ? "var(--cor-complementar-2)" : "var(--cor-secundaria);"};
+        opacity:  ${(props) => props.disapear == true ? "0.3" : "1"};
     }
     button{
         display: ${(props) => props.disapear == true ? "none" : "inline-flex"};
@@ -176,7 +177,7 @@ export const LastSteps = styled.div`
         background-color: var(--cor-primaria);
         color: var(--cor-secundaria);
 
-        :hover{
+        :focus, :hover{
             background-color: var(--cor-complementar-1);
         }
     }

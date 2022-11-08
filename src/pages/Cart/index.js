@@ -23,7 +23,7 @@ export const Cart = () =>
     name: "Fablehaven: Rise of the Evening Star",
     image: "https://m.media-amazon.com/images/I/71AZbpvctuL.jpg",
     quantity: 1,
-    price: 29.99
+    price: 49.90
   }, {
     id: 3,
     category: "Escritório",
@@ -31,6 +31,13 @@ export const Cart = () =>
     image: "https://m.media-amazon.com/images/I/51VU1+eoXhL._AC_SX425_.jpg",
     quantity: 1,
     price: 429.99
+  }, {
+    id: 4,
+    category: "Informática",
+    name: "Monitor IPS FHD UltraWide 21:9 - 29WL500-B",
+    image: "https://www.lg.com/br/images/monitores/md07533313/gallery/D-01.jpg",
+    quantity: 1,
+    price: 1250.00
   }
   ]);
 
@@ -58,8 +65,8 @@ export const Cart = () =>
   const decreaseAmount = (id) => {
     const index = listProducts.findIndex(product => product.id === id);
     const newList = listProducts;
-    if(newList[index].quantity === 0){
-      newList[index].quantity = 0
+    if(newList[index].quantity === 1){
+      newList[index].quantity = 1
     } else{
       newList[index].quantity = newList[index].quantity - 1
     }
@@ -76,10 +83,10 @@ export const Cart = () =>
     for(let i = 0; i < listProducts.length; i++){
       amount = amount + (listProducts[i].quantity * listProducts[i].price)
     }
-    setTotal("Total: " + amount.toFixed(2))
+    setTotal("R$ " + amount.toFixed(2))
 
     if(!listProducts.length > 0){
-      setTotal("Não há produtos no seu carrinho")
+      setTotal("Seu carrinho está vazio :(")
       setDisapear(true)
     }
   }
@@ -95,14 +102,14 @@ export const Cart = () =>
             <ProductInfo>
               <h2>{product.name}</h2>
               <p> <strong>Categoria: </strong>{product.category}</p>
-              <img src={product.image} alt="teste"/>
+              <img src={product.image} alt={product.image}/>
             </ProductInfo>
             <OrderInfo>
                 <p> <strong>Quantidade: </strong>{product.quantity}
                   <button onClick={() => increaseAmount(product.id)}>+</button>
                   <button onClick={() => decreaseAmount(product.id)}>-</button>
                 </p>
-                <p> <strong>Preço: </strong>  {product.price}</p>
+                <p> <strong>Preço: </strong>  {product.price.toFixed(2)}</p>
                   <RemoveProduct onClick={() => removeProduct(product.id)}>Remover produto</RemoveProduct>
             </OrderInfo>
 

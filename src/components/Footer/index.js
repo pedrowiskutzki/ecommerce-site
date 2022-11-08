@@ -31,28 +31,28 @@ const Footer = () => {
           </Column> 
           <Column>
             
-            <FooterLink href="#">
+            <FooterLink aria-label="Facebook"  href="#">
                 <i className="FaFacebook">
                     <span style={{ marginLeft: "10px" }}>
                     <FaFacebook/>
                     </span>
                 </i>
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink aria-label="Instagram" href="#">
               <i className="FaInstagram">
                 <span style={{ marginLeft: "10px" }}>
                   <FaInstagram/>
                 </span>
               </i>
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink aria-label="Twitter" href="#">
               <i className="FaTwitter">
                 <span style={{ marginLeft: "10px" }}>
                   <FaTwitter/>
                 </span>
               </i>
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink aria-label="Youtube" href="#">
               <i className="FaYoutube">
                 <span style={{ marginLeft: "10px" }}>
                   <FaYoutube/>
