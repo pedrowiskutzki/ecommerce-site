@@ -11,9 +11,11 @@ export function App() {
     return (
         <>
             <GlobalStyle />
+
             <BrowserRouter>
                 <AuthProvider>
                     <Navbar />
+
                     <Router />
                 </AuthProvider>
             </BrowserRouter>
