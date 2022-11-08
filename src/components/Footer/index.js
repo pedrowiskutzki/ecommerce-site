@@ -9,7 +9,6 @@ import {
 } from "./styles";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
-
   
 const Footer = () => {
   return (
@@ -19,9 +18,9 @@ const Footer = () => {
         <Row>
           <Column> 
           <Heading>Sobre Nós</Heading>
-            <FooterLink href="#">Nossa História</FooterLink>
-            <FooterLink href="#">Tendências</FooterLink>
-            <FooterLink href="#">Sustentabilidade</FooterLink>
+            <FooterLink href="/ourHistory">Nossa História</FooterLink>
+            <FooterLink href="/tendencias">Tendências</FooterLink>
+            <FooterLink href="/sustentabilidade">Sustentabilidade</FooterLink>
           </Column>
           <Column>
             <Heading>Serviços</Heading>

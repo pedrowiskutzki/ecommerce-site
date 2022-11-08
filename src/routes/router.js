@@ -9,6 +9,9 @@ import { Login } from "../pages/Login/index";
 import { Registration } from "../pages/Registration/index";
 import { User } from "../pages/User/index";
 import { useContext } from "react";
+import { AboutUs } from "../pages/SobreNos/ourHistory";
+import { Tendencias } from "../pages/SobreNos/tendencias";
+import { Sustentabilidade } from "../pages/SobreNos/sustentabilidade";
 
 export function Router() {
     //Validação de Login não permite acessar as outras areas sem autenticação
@@ -24,7 +27,11 @@ export function Router() {
                 <Route path="/cart" element={<Login />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/registration" element={<Registration />} />
+                <Route path="/ourHistory" element={<AboutUs />} />
+                <Route path="/tendencias" element={<Tendencias />} />
+                <Route path="/sustentabilidade" element={<Sustentabilidade />} />
                 <Route path="/user" element={<Home />} />
+
             </Routes>
         );
     }
@@ -37,7 +44,12 @@ export function Router() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Home />} />
             <Route path="/registration" element={<Registration />} />
+            <Route path="/registration" element={<Home />} />
+            <Route path="/ourHistory" element={<AboutUs />} />
+            <Route path="/tendencias" element={<Tendencias />} />
+            <Route path="/sustentabilidade" element={<Sustentabilidade />} />
             <Route path="/user" element={<User />} />
+
         </Routes>
     );
 }
