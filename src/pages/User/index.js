@@ -23,7 +23,6 @@ export function User() {
         setOpenForm(!openForm);
     }
     
-
     return (
         
         <Container>
