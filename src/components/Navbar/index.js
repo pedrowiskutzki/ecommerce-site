@@ -10,6 +10,7 @@ import {
 } from './NavbarElements';
 import AuthContext from "../../context/auth";
 import { useContext } from "react";
+import { User } from "phosphor-react";
 
 const Navbar = () => {
 
@@ -64,7 +65,7 @@ const Navbar = () => {
         </NavMenu>
         <NavBtn  hamburguer={hamburguer}>
           <NavBtnLink isAuthenticated={isAuthenticated} onClick={() => closeeHamburguer()} to='/login'>Login</NavBtnLink>
-          <NavBtnLink isAuthenticated={isAuthenticated} onClick={() => closeeHamburguer()} to='/'>Sair</NavBtnLink>
+          <NavBtnLink isAuthenticated={isAuthenticated} onClick={() => closeeHamburguer()} to='/user'><User size={32} /></NavBtnLink>
         </NavBtn>
       </Nav>
     </>

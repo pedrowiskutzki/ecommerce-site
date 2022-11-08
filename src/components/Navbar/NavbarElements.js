@@ -149,8 +149,12 @@ export const NavBtnLink = styled(Link)`
     &:hover, :focus {
       color: var(--cor-primaria);
     }
+
+    i{
+      background-color: red;
+    }
   }
 
-
+  
 
 `;

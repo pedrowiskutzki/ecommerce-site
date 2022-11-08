@@ -102,12 +102,12 @@ export const Cart = () =>
             <ProductInfo>
               <h2>{product.name}</h2>
               <p> <strong>Categoria: </strong>{product.category}</p>
-              <img src={product.image} alt={product.name}/>
+              <img src={product.image} alt={product.image}/>
             </ProductInfo>
             <OrderInfo>
                 <p> <strong>Quantidade: </strong>{product.quantity}
-                  <button aria-label='Adicionar mais uma unidade do produto ao carrinho' onClick={() => increaseAmount(product.id)}>+</button>
-                  <button aria-label='Remover uma unidade do produto do carrinho' onClick={() => decreaseAmount(product.id)}>-</button>
+                  <button onClick={() => increaseAmount(product.id)}>+</button>
+                  <button onClick={() => decreaseAmount(product.id)}>-</button>
                 </p>
                 <p> <strong>Preço: </strong>  {product.price.toFixed(2)}</p>
                   <RemoveProduct onClick={() => removeProduct(product.id)}>Remover produto</RemoveProduct>
@@ -119,7 +119,7 @@ export const Cart = () =>
       </ul>
       <LastSteps disapear={disapear}>
         <h3>{total}</h3>
-        <button label>Finalizar compra</button>
+        <button>Finalizar compra</button>
       </LastSteps>
     </Container>
   );
