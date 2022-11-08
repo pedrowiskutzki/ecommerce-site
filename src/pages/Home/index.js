@@ -2,7 +2,6 @@ import { useContext } from "react";
 import AuthContext from "../../context/auth";
 import EmblaCarousel from "../../components/Carousel";
 import { Container, NomeCategoria } from "./styled";
-import produtoService from "../../service/request/productService";
 import { Bookstore } from "../bookstore";
 import { Computing } from "../computing";
 import { Office } from "../office";
