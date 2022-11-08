@@ -6,6 +6,8 @@ const AuthContext = createContext({});
 export const AuthProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(true);
 
+    const [userId, setUserId] = useState("");
+
     const [userName, setUserName] = useState("");
 
     const [userEmail, setUserEmail] = useState("");
@@ -17,12 +19,20 @@ export const AuthProvider = ({ children }) => {
             const storageIsAuthenticated = await localStorage.getItem(
                 "@authenticated"
             );
+            const storageUserId = await localStorage.getItem("@id");
             const storageUserName = await localStorage.getItem("@user");
             const storageUserEmail = await localStorage.getItem("@email");
+
+            console.log(storageUserName);
+            console.log(storageUserId);
 
             if (storageIsAuthenticated && storageUserName) {
                 setIsAuthenticated(true);
                 setUserName(storageUserName);
+            }
+            if (storageIsAuthenticated && storageUserId) {
+                setIsAuthenticated(true);
+                setUserId(storageUserId);
             }
             if (storageIsAuthenticated && storageUserEmail) {
                 setIsAuthenticated(true);
@@ -42,7 +52,7 @@ export const AuthProvider = ({ children }) => {
             .catch((err) => console.log(err));
     }, []);
 
-    function signIn(emailLogin, senha) {
+    function signIn(emailLogin, senhaLogin) {
         const listClient = client;
 
         for (let index = 0; index < listClient.length; index++) {
@@ -52,28 +62,31 @@ export const AuthProvider = ({ children }) => {
             const listaNome = listClient.map((client) => client.nome);
             const listaSenha = listClient.map((client) => client.senha);
             const listaEmail = listClient.map((client) => client.email);
-
             arrayLogin.unshift(listaId, listaNome, listaSenha, listaEmail);
 
             for (let index = 0; index < arrayLogin.length; index++) {
                 const element = arrayLogin[index];
 
+                const id = listaId[index];
                 const nome = listaNome[index];
                 const email = listaEmail[index];
+
                 if (
                     emailLogin === listaEmail[index] &&
-                    senha === listaSenha[index]
+                    senhaLogin === listaSenha[index]
                 ) {
                     localStorage.setItem("@authenticated", true);
                     localStorage.setItem(
                         "@token",
                         "asdfojndasipufbdSIFGBDIWogbiued"
                     );
-                    localStorage.setItem("@user", `${nome}`);
-                    localStorage.setItem("@email", `${email}`);
+                    localStorage.setItem("@id", id);
+                    localStorage.setItem("@user", nome);
+                    localStorage.setItem("@email", email);
                     setIsAuthenticated(true);
-                    setUserName(`${nome}`);
-                    setUserEmail(`${email}`);
+                    setUserId(id);
+                    setUserName(nome);
+                    setUserEmail(email);
                     return;
                 }
             }
@@ -82,6 +95,7 @@ export const AuthProvider = ({ children }) => {
 
     function signOut() {
         setIsAuthenticated(false);
+        setUserId("");
         setUserName("");
         setUserEmail("");
         localStorage.clear();
@@ -93,6 +107,7 @@ export const AuthProvider = ({ children }) => {
                 isAuthenticated,
                 signIn,
                 signOut,
+                userId,
                 userName,
                 userEmail,
             }}
