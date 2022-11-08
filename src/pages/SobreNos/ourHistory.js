@@ -1,5 +1,5 @@
 import React from "react";
-import { BodyText, Box, Column, Container, Row, Text } from "./stylesOurHistory";
+import { BodyText, Column, Container, Text } from "./stylesOurHistory";
 
 
 

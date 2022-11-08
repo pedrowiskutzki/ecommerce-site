@@ -19,8 +19,8 @@ const Footer = () => {
           <Column> 
           <Heading>Sobre Nós</Heading>
             <FooterLink href="/ourHistory">Nossa História</FooterLink>
-            <FooterLink href="#">Tendências</FooterLink>
-            <FooterLink href="#">Sustentabilidade</FooterLink>
+            <FooterLink href="/tendencias">Tendências</FooterLink>
+            <FooterLink href="/sustentabilidade">Sustentabilidade</FooterLink>
           </Column>
           <Column>
             <Heading>Serviços</Heading>
