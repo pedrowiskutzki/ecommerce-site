@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import produtoService from "../service/request/productService";
-import { Container } from "./Home/styled";
 
 export const Computing = () => {
     const [category, setCategory] = useState([]);
@@ -23,7 +22,6 @@ export const Computing = () => {
     const informatica = 1;
 
     return (
-        <Container>
         <div className="container">
             <div className="carousel" ref={carousel}>
                 {category.map((item) => {
@@ -53,7 +51,7 @@ export const Computing = () => {
                                     </span>
                                     <br />
                                     <span className="price">
-                                         Valor: R${valor.toFixed(2)}
+                                        U$ Valor: ${valor.toFixed(2)}
                                     </span>
                                 </div>
                             </div>
@@ -62,6 +60,5 @@ export const Computing = () => {
                 })}
             </div>
         </div>
-        </Container>
     );
 };

@@ -21,7 +21,6 @@ export function User() {
     const [openForm, setOpenForm] = useState(false);
     const toggleForm = () => {
         setOpenForm(!openForm);
-
     };
 
     return (
