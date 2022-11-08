@@ -5,17 +5,28 @@ const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(true);
+
     const [userName, setUserName] = useState("");
+
+    const [userEmail, setUserEmail] = useState("");
+
     const [client, setClient] = useState([]);
 
     useEffect(() => {
         async function loadStorageData() {
-            const storageIsAuthenticated = await localStorage.getItem("@authenticated");
+            const storageIsAuthenticated = await localStorage.getItem(
+                "@authenticated"
+            );
             const storageUserName = await localStorage.getItem("@user");
+            const storageUserEmail = await localStorage.getItem("@email");
 
             if (storageIsAuthenticated && storageUserName) {
                 setIsAuthenticated(true);
                 setUserName(storageUserName);
+            }
+            if (storageIsAuthenticated && storageUserEmail) {
+                setIsAuthenticated(true);
+                setUserEmail(storageUserEmail);
             }
         }
 
@@ -31,7 +42,7 @@ export const AuthProvider = ({ children }) => {
             .catch((err) => console.log(err));
     }, []);
 
-    function signIn(email, senha) {
+    function signIn(emailLogin, senha) {
         const listClient = client;
 
         for (let index = 0; index < listClient.length; index++) {
@@ -46,13 +57,23 @@ export const AuthProvider = ({ children }) => {
 
             for (let index = 0; index < arrayLogin.length; index++) {
                 const element = arrayLogin[index];
+
                 const nome = listaNome[index];
-                if (email === listaEmail[index] && senha === listaSenha[index]) {
+                const email = listaEmail[index];
+                if (
+                    emailLogin === listaEmail[index] &&
+                    senha === listaSenha[index]
+                ) {
                     localStorage.setItem("@authenticated", true);
-                    localStorage.setItem("@token", "asdfojndasipufbdSIFGBDIWogbiued");
+                    localStorage.setItem(
+                        "@token",
+                        "asdfojndasipufbdSIFGBDIWogbiued"
+                    );
                     localStorage.setItem("@user", `${nome}`);
+                    localStorage.setItem("@email", `${email}`);
                     setIsAuthenticated(true);
                     setUserName(`${nome}`);
+                    setUserEmail(`${email}`);
                     return;
                 }
             }
@@ -62,6 +83,7 @@ export const AuthProvider = ({ children }) => {
     function signOut() {
         setIsAuthenticated(false);
         setUserName("");
+        setUserEmail("");
         localStorage.clear();
     }
 
@@ -72,6 +94,7 @@ export const AuthProvider = ({ children }) => {
                 signIn,
                 signOut,
                 userName,
+                userEmail,
             }}
         >
             {children}
