@@ -7,9 +7,9 @@ import media6 from "./BannerCad.png";
 
 
 export const media = [media1,
-media2=[{ href:"./computing"}],
-  media3=[{ href:"./office"}],
-   media4=[{ href:"./bookstore"}],
+media2,
+  media3,
+   media4,
     media5,
-     media6=[{ href:"./Registration"}]];
+     media6];
 export const mediaByIndex = index => media[index % media.length];
