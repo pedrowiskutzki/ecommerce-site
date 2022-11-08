@@ -14,13 +14,11 @@ export function Home() {
         <div>
             <h1>Ola, {userName}</h1>
             <button onClick={() => signOut()}>Sair</button>
-        </div>    
-        <Container>
             <Bookstore/>
             <Computing/>
             <Office/>
-        </Container>
-        </>
+        </div>
+
     );
 }
      //               const { id, name, price, oldPrice, image } = item;

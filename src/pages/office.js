@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import produtoService from "../service/request/productService";
-import { Container } from "./Home/styled";
+import { Container } from "../pages/Home/styled";
+
 
 export const Office = () => {
     const [category, setCategory] = useState([]);

@@ -9,7 +9,6 @@ export const Container = styled.div`
  //align-items:end;  
   //align-items: ;
 
-
 .item {
   background-color: blue;
   margin: 40px;
