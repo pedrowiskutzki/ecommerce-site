@@ -1,20 +1,31 @@
 import { useContext } from "react";
 import AuthContext from "../../context/auth";
+import EmblaCarousel from "../../components/Carousel";
+import { Container, NomeCategoria } from "./styled";
 import { Bookstore } from "../bookstore";
 import { Computing } from "../computing";
 import { Office } from "../office";
 
 export function Home() {
     const { signOut, userName } = useContext(AuthContext);
+    const SLIDE_COUNT = 6;
+    const slides = Array.from(Array(SLIDE_COUNT).keys());
 
     return (
-        <div>
-            <h1>Ola, {userName}</h1>
-            <button onClick={() => signOut()}>Sair</button>
 
-            <Bookstore />
-            <Computing />
-            <Office />
-        </div>
+       <>
+            <EmblaCarousel slides={slides} />
+            <Container>
+                <h1>Bem vindo, <strong>{userName}</strong>!</h1>
+
+
+                    <NomeCategoria>Informática</NomeCategoria>
+                    <Computing/>
+                    <NomeCategoria>Livraria</NomeCategoria>
+                    <Bookstore/>
+                   <NomeCategoria>Escritório</NomeCategoria>
+                <Office/>
+            </Container>
+        </>
     );
 }

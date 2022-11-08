@@ -1,7 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import produtoService from "../service/request/productService";
-import { Container } from "../pages/styled";
+import { Container,
+        Item,
+        NomeProduto,
+        DescricaoProduto,
+        ValorProduto} from "../pages/styled";
+
 
 export const Office = () => {
     const [category, setCategory] = useState([]);
@@ -35,60 +40,39 @@ export const Office = () => {
 
     return (
         <Container>
-            <div className="container">
-                <div className="carousel" ref={carousel}>
-                    {category.map((item) => {
-                        const {
-                            id,
-                            idCategoria,
-                            nome,
-                            valor,
-                            descricao,
-                            fotoLink,
-                        } = item;
-                        if (idCategoria === office) {
-                            return (
-                                <div className="item" key={id}>
-                                    <div className="image">
-                                        <img
-                                            src={fotoLink}
-                                            alt={nome}
-                                            height="400"
-                                        />
-                                    </div>
-                                    <div className="info">
-                                        <span className="name">
-                                            Nome: {nome}
-                                        </span>
-                                        <br />
-                                        <span className="descricao">
-                                            Descrição: {descricao}
-                                        </span>
-                                        <br />
-                                        <span className="price">
-                                            U$ Valor: ${valor.toFixed(2)}
-                                        </span>
-                                    </div>
-                                </div>
-                            );
-                        }
-                    })}
-                </div>
-                <div className="buttons">
-                    <button onClick={handleLeftClick}>
-                        <img
-                            src="/static/images/216151_right_chevron_icon.png"
-                            alt="Scroll Left"
-                        />
-                    </button>
-                    <button onClick={handleRightClick}>
-                        <img
-                            src="/static/images/216151_right_chevron_icon.png"
-                            alt="Scroll Right"
-                        />
-                    </button>
-                </div>
-            </div>
+            {category.map((item) => {
+                const {
+                    id,
+                    idCategoria,
+                    nome,
+                    valor,
+                    descricao,
+                    fotoLink,
+                } = item;
+                if (idCategoria === office) {
+                    return (
+                        <Item className="item" key={id}>
+                            <div className="image">
+                                <img src={fotoLink} alt={nome} />
+                            </div>
+                            <div className="info">
+                                <NomeProduto className="name">
+                                    {nome}
+                                </NomeProduto>
+                                <br />
+                                <DescricaoProduto className="descricao">
+                                    {descricao}
+                                </DescricaoProduto>
+                                <br />
+                                <ValorProduto className="price">
+                                    R$: {valor.toFixed(2)}
+                                </ValorProduto>
+                            </div>
+
+                        </Item>
+                    );
+                }
+            })} 
         </Container>
     );
 };
