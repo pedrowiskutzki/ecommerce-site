@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import AuthContext from "../../context/auth";
 import clientService from "../../service/request/clientService";
 import { Container } from "./styled";
 
@@ -18,7 +17,7 @@ export function Registration() {
             email: email,
             passwordCheck: passwordCheck,
         };
-        console.log(user);
+
         clientService.create(user).then((res) => {
             console.log(res);
             console.log(res.data);
