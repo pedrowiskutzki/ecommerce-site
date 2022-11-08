@@ -52,7 +52,7 @@ export const Bookstore = () => {
                                     </span>
                                     <br />
                                     <span className="price">
-                                        U$ Valor: ${valor.toFixed(2)}
+                                         Valor: R${valor.toFixed(2)}
                                     </span>
                                 </div>
                             </div>

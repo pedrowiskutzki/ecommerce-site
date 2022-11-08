@@ -3,6 +3,7 @@ import { useState } from "react";
 import produtoService from "../service/request/productService";
 import { Container } from "../pages/Home/styled";
 
+
 export const Office = () => {
     const [category, setCategory] = useState([]);
     const carousel = useRef(null);
@@ -53,7 +54,7 @@ export const Office = () => {
                                     </span>
                                     <br />
                                     <span className="price">
-                                        U$ Valor: ${valor.toFixed(2)}
+                                         Valor: R${valor.toFixed(2)}
                                     </span>
                                 </div>
                             </div>
