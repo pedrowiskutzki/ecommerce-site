@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { DotButton, PrevButton, NextButton } from "./Buttons";
 import useEmblaCarousel from "embla-carousel-react";
 import { mediaByIndex } from "../../images/carousel";
-import { Container } from "./styled.js"
+import { ContainerCarousel, Box } from "./styled.js"
 
 
 const EmblaCarousel = ({ slides }) => {
@@ -33,7 +33,7 @@ const EmblaCarousel = ({ slides }) => {
   }, [embla, setScrollSnaps, onSelect]);
 
   return (
-    <Container>
+    <ContainerCarousel>
       <div className="embla">
         <div className="embla__viewport" ref={viewportRef}>
           <div className="embla__container">
@@ -53,7 +53,7 @@ const EmblaCarousel = ({ slides }) => {
           </div>
           <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
           <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
-        </div>
+        </div> 
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
@@ -64,8 +64,7 @@ const EmblaCarousel = ({ slides }) => {
           ))}
         </div>
       </div>
-        
-    </Container>
+    </ContainerCarousel>
   );
 };
 

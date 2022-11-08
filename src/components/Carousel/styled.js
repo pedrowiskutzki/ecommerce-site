@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
+export const ContainerCarousel = styled.div`
+
     display: inline-block;
     text-align: center;
     max-width: 100%;
@@ -10,13 +11,13 @@ export const Container = styled.div`
     font-size: 1.6rem;
     align-items: center;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     margin-left :0 ;
     margin-right: 0; 
     
-   
+
     
-.embla {
+ .embla{ 
   display: inline-block; 
   background-color: #292929;
   max-width: 100%;
@@ -25,39 +26,39 @@ export const Container = styled.div`
   max-height: 100%;
   padding-top:1rem;
   margin-bottom: 1rem;
-   
-}
+ }  
 
-.embla__viewport {
+
+  .embla__viewport {
   overflow: hidden;
   width: 100%;
-}
+  }
 
-.embla__viewport.is-draggable {
+  .embla__viewport.is-draggable {
   cursor: move;
   cursor: grab;
-}
+  }
 
-.embla__viewport.is-dragging {
+  .embla__viewport.is-dragging {
   cursor: grabbing;
-}
+  }
 
-.embla__container {
+  .embla__container {
   display: flex;
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -webkit-tap-highlight-color: transparent;
   width: 100%;
-}
+  }
 
-.embla__slide {
+  .embla__slide {
  
   min-width: 100%;
   width: 100%;
-}
+  }
 
-.embla__slide__inner {
+  .embla__slide__inner {
   display: inline-block;
   align-items: center;
   width: 100%;
@@ -65,18 +66,18 @@ export const Container = styled.div`
   max-height: 350px;
   max-width: 100%; 
   
-}
+  }
 
-.embla__slide__img { 
+  .embla__slide__img { 
   display: inline-block;
   align-items: center; 
   max-height: 350px;
   width: 1400px;
   max-width: 100%;
   cursor: pointer; 
-}
+  }
 
-.embla__button {
+  .embla .embla__button {
   outline: 0;
   cursor: pointer;
   background-color: transparent;
@@ -91,39 +92,39 @@ export const Container = styled.div`
   align-items:center;
   fill: #1bcacd;
   padding: 0;
-}
+  }
 
-.embla__button:disabled {
+  .embla__button:disabled {
   
   cursor: default;
   opacity: 0.3;
-}
+  }
 
-.embla__button__svg {
+  .embla__button__svg {
   width: 100%;
   height: 100%;
-}
+  }
 
-.embla__button--prev {
-  top:50%;
+  .embla__button--prev {
+  position: relative;
   align-items: center;
   left: 27px;
-}
+  }
 
-.embla__button--next {
-  top:50%;
+  .embla__button--next {
+  position: relative;
   align-items: center;
   right: 27px;
-}
+  }
 
-.embla__dots {
+  .embla__dots {
   display: flex;
   list-style: none;
   justify-content: center;
   
-}
+  }
 
-.embla__dot {
+  .embla__dot {
   background-color: transparent;
   cursor: pointer;
   position: relative;
@@ -132,22 +133,23 @@ export const Container = styled.div`
   border: 0;
   width: 30px;
   height: 30px; 
-  margin-right: 2.5px;
+  margin-right: 7.5px;
   margin-left: 7.5px;
   display: flex;
   align-items: center;
-}
+  }
 
-.embla__dot:after {
+  .embla__dot:after {
   background-color: #efefef;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   content: "";
-}
+  }
 
-.embla__dot.is-selected:after {
+  .embla__dot.is-selected:after {
   background-color: #1bcacd;
   opacity: 1;
-}
+  }
+
 `

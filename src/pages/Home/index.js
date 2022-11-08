@@ -9,9 +9,9 @@ export function Home() {
 
     return (
         <div>
-            <EmblaCarousel slides={slides} />
             <h1 style={{marginTop:"2rem"}}>Ola, {userName}</h1>
             <button onClick={() => signOut()}>Sair</button>
+            <EmblaCarousel slides={slides} />
         </div>
     );
 }
