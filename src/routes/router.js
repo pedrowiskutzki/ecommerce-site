@@ -29,9 +29,11 @@ export function Router() {
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/ourHistory" element={<AboutUs />} />
                 <Route path="/tendencias" element={<Tendencias />} />
-                <Route path="/sustentabilidade" element={<Sustentabilidade />} />
+                <Route
+                    path="/sustentabilidade"
+                    element={<Sustentabilidade />}
+                />
                 <Route path="/user" element={<Home />} />
-
             </Routes>
         );
     }
@@ -49,7 +51,6 @@ export function Router() {
             <Route path="/tendencias" element={<Tendencias />} />
             <Route path="/sustentabilidade" element={<Sustentabilidade />} />
             <Route path="/user" element={<User />} />
-
         </Routes>
     );
 }
