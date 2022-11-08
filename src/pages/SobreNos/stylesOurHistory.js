@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
     
     display: flex;
+    max-width: 768px;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    padding: 1rem;
+    padding: 2rem;
     gap: 2rem;    
     margin: auto;
     max-width: 1024px;
@@ -17,16 +18,20 @@ export const Container = styled.div`
    
 export const Column = styled.div`
   background-color: var(--background-footer);
+  filter: drop-shadow(2px 2px 6px black);
+  border: 2px solid var(--cor-primaria);
   margin-left:10px;
   display: flex;
   gap: 1rem;
   flex-direction: column;
   text-align: right;
-  min-height: 280px;
+  height: fit-content;
   flex-wrap: wrap;
   padding: 2rem;
   text-align: center;
-  width: flex;
+  max-width: 700px;
+  width: auto;
+  margin: auto;
   border-radius: 6px;
 
   @media screen and (max-width: 899px) {
@@ -38,9 +43,10 @@ export const Column = styled.div`
 `;
 
 export const Text = styled.h2`
+  filter: drop-shadow(2px 2px 12px var(--cor-primaria));
   text-align: center;
-  font-size: 24px;
-  color: var(--cor-secundaria);
+  font-size: 2rem;
+  color: var(--cor-primaria);
   margin-bottom: 1rem;
   font-weight: bold;
   width: 100%;
@@ -49,7 +55,7 @@ export const Text = styled.h2`
 
 export const BodyText = styled.p`
   text-align: justify;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--cor-secundaria);
   margin-bottom: 1rem;
   /* font-weight: bold; */

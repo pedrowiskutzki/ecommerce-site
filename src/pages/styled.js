@@ -1,97 +1,82 @@
-import styled from "styled-components";
+ import styled from "styled-components";
 
 export const Container = styled.div`
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    padding-top: 1rem ;
+    min-height: 54vh;
+    width: auto;
+    margin: auto;
+    margin-bottom: 2rem;
+    gap: 2rem;
+   
+`
 
-    body {
+export const Item = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 250px;
+    padding: 1rem;
+    height: 430px;
+    padding: 1.5rem;
+
+    border-radius: 6px;
+    background-color: var(--background-footer);
+    filter: drop-shadow(2px 2px 8px black);
+    
+    @media screen and (max-width: 450px){
+        width: 400px;
+    }
+    
+    img{
+        width: auto;
+        height: auto;
         width: 100%;
-        min-height: 100vh;
-        background-color: #e1e1e1;
-        color: #1e1e1e;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .container {
-        max-width: 75vw;
-    }
-    .container .carousel {
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-    }
-
-    .container .carousel::-webkit-scrollbar {
-        display: none;
-    }
-
-    .container .carousel .item {
         background-color: white;
-        margin: 10px;
-        padding: 10px;
-        height: 550px;
-        width: 280px;
-        border-radius: 16px;
-        flex: none;
-    }
-
-    .container .carousel .item .image img {
-        width: 100%;
-        height: 100%;
+        height: 200px;
         object-fit: cover;
+        border-radius: 6px;
     }
+`
+export const NomeProduto = styled.h2`
+    margin-top: 1rem;
+    width: 200px;
+    min-height: 40px;
+    filter: drop-shadow(0px 0px 8px var(--cor-primaria));
+    color: var(--cor-secundaria);
+`
 
-    .container .carousel .item .info {
-        height: 140px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+export const DescricaoProduto = styled.p`
+    margin-top: -1rem;
+    min-height: 30px;
+    color: var(--cor-secundaria);
+    font-size: 0.875rem;
+`
 
-    .container .carousel .item .info span {
-        display: block;
-        text-align: center;
-        color: #1e1e1e;
-        padding: 5px;
-        border-radius: 10px;
-    }
+export const ValorProduto = styled.p`
+    position: relative;
+    border-radius: 50px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    filter: drop-shadow(0px 0px 10px var(--cor-primaria));
+    transition: 0.3s ease-in-out;
 
-    .container .carousel .item .info .name {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin: 10px 0;
-        color: #00a8fb;
-    }
+    font-weight: bold;
+    text-align: center;
+    
+    min-width: fit-content;
+    width: 100px;
+    margin: auto;
+    padding: 0.75rem;
 
-    .container .carousel .item .info .oldPrice {
-        font-size: 0.8rem;
-        text-decoration: line-through;
-        flex-grow: 1;
-        color: #e81a5d;
+    :hover, :focus{
+        background-color: var(--cor-primaria);
+        color: var(--cor-secundaria);
     }
-
-    .container .carousel .item .info .price {
-        margin-top: 10px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        background-color: #ff7e3b;
-    }
-
-    .container .buttons {
-        width: 100%;
-        text-align: center;
-    }
-    .container .buttons button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-    .container .buttons button:first-child img {
-        transform: rotate(180deg);
-    }
-`;
+`

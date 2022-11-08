@@ -11,26 +11,25 @@ export const AboutUs = () => {
               <Column>
                 <Text>Nossa História</Text>
                   <BodyText> Criada a partir da reunião de um grupo de Residentes do programa de ensino
-                  voltado a Programação ( Residência TIC/Software 2022.2 - Serratec ), a empresa O WALL LINE
+                  voltado a Programação <strong>( Residência TIC/Software 2022.2 - Serratec )</strong>, a empresa <strong>O WALL LINE </strong> 
                   tem como principal objetivo ser uma plataforma de acesso intuitivo e prático para levar a seus 
                   clientes a facilidade e praticidade de escolher excelentes produtos, contando com nossos 
                   serviços personalizados.
-                  Com mais de 20.000 vendas mensais, aos poucos vamos consolidando a empresa como uma referência
+                  Com <strong>mais de 20.000 vendas mensais</strong> , aos poucos vamos consolidando a empresa como uma referência
                   no comércio eletrônico, e também uma referência nos serviços prestados aos nossos clientes,
                   parceiros e colaboradores.</BodyText>
               </Column>             
           
               <Column>
                 <Text>Missão</Text>
-                 <BodyText>Nossa missão é proporcionar aos nossos Colaboradores, Clientes e Parceiros uma experiência
-                 única na forma fazermos negócios on-Line, com confiança, credibilidade, agilidade e trazendo muitas oportunidades
+                 <BodyText>Nossa missão é proporcionar aos nossos <strong>colaboradores</strong>, <strong>clientes</strong> e <strong>parceiros</strong> uma experiência
+                 única na forma fazermos negócios on-line, com <strong>confiança</strong>, <strong>credibilidade</strong>, <strong>agilidade</strong> e trazendo muitas <strong>oportunidades </strong>
                  de negócios para todos os envolvidos.</BodyText>
               </Column>
             
               <Column>
                 <Text>Valores</Text>
-                  <BodyText>Nossos Valores são: Honestidade, Credibilidade, Trabalho incessante e foco total nos serviços
-                  prestados aos nossos Clientes, Parceiros e Colaboradores.</BodyText>
+                  <BodyText>Nossos valores são: <strong>honestidade</strong>, <strong>credibilidade</strong>, <strong>trabalho incessante</strong> e <strong>foco total nos serviços prestados </strong> aos nossos clientes, parceiros e colaboradores.</BodyText>
               </Column>
             
           </Container>
