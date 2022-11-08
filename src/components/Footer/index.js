@@ -24,8 +24,8 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Serviços</Heading>
-            <FooterLink href="#">Comprar</FooterLink>
-            <FooterLink href="#">Carrinho</FooterLink>
+            <FooterLink href="/">Comprar</FooterLink>
+            <FooterLink href="/cart">Carrinho</FooterLink>
             <FooterLink href="#">Seus Pedidos</FooterLink>
             <FooterLink href="#">Solução de problemas</FooterLink>
           </Column> 

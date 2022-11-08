@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import AuthContext from "../../context/auth";
-import { Container } from "./styled";
+import { Container, NomeCategoria } from "./styled";
 import produtoService from "../../service/request/productService";
 import { Bookstore } from "../bookstore";
 import { Computing } from "../computing";
@@ -11,14 +11,17 @@ export function Home() {
 
     return (
        <>
-        <div>
-            <h1>Ola, {userName}</h1>
-            <button onClick={() => signOut()}>Sair</button>
-            <Bookstore/>
-            <Computing/>
-            <Office/>
-        </div>
+            <Container>
+                <h1>Bem vindo, <strong>{userName}</strong>!</h1>
 
+                    <NomeCategoria>Informática</NomeCategoria>
+                    <Computing/>
+                    <NomeCategoria>Livraria</NomeCategoria>
+                    <Bookstore/>
+                   <NomeCategoria>Escritório</NomeCategoria>
+                <Office/>
+            </Container>
+        </>
     );
 }
      //               const { id, name, price, oldPrice, image } = item;

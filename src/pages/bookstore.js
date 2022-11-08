@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import produtoService from "../service/request/productService";
-import { Container } from "../pages/styled";
+import { Container,
+        Item,
+        NomeProduto,
+        ValorProduto,
+        DescricaoProduto } from "../pages/styled";
 
 
 export const Bookstore = () => {
@@ -35,9 +39,7 @@ export const Bookstore = () => {
     const books = 3;
 
     return (
-        <Container>
-            <div className="container">
-                <div className="carousel" ref={carousel}>
+         <Container>
                     {category.map((item) => {
                         const {
                             id,
@@ -49,48 +51,28 @@ export const Bookstore = () => {
                         } = item;
                         if (idCategoria === books) {
                             return (
-                                <div className="item" key={id}>
+                                <Item className="item" key={id}>
                                     <div className="image">
-                                        <img
-                                            src={fotoLink}
-                                            alt={nome}
-                                            height="400"
-                                        />
+                                        <img src={fotoLink} alt={nome} />
                                     </div>
                                     <div className="info">
-                                        <span className="name">
-                                            Nome: {nome}
-                                        </span>
+                                        <NomeProduto className="name">
+                                            {nome}
+                                        </NomeProduto>
                                         <br />
-                                        <span className="descricao">
-                                            Descrição: {descricao}
-                                        </span>
+                                        <DescricaoProduto className="descricao">
+                                            {descricao}
+                                        </DescricaoProduto>
                                         <br />
-                                        <span className="price">
-                                            U$ Valor: ${valor.toFixed(2)}
-                                        </span>
+                                        <ValorProduto className="price">
+                                            R$: {valor.toFixed(2)}
+                                        </ValorProduto>
                                     </div>
-       
-                                </div>
+
+                                </Item>
                             );
                         }
-                    })}
-                </div>
-                <div className="buttons">
-                    <button onClick={handleLeftClick}>
-                        <img
-                            src="/static/images/216151_right_chevron_icon.png"
-                            alt="Scroll Left"
-                        />
-                    </button>
-                    <button onClick={handleRightClick}>
-                        <img
-                            src="/static/images/216151_right_chevron_icon.png"
-                            alt="Scroll Right"
-                        />
-                    </button>
-                </div>
-            </div>
+                    })} 
         </Container>
     );
 };
