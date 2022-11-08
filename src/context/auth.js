@@ -4,7 +4,7 @@ import clienteService from "../service/request/clientService";
 const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
     const [userName, setUserName] = useState("");
     const [client, setClient] = useState([]);
 

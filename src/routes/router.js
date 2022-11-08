@@ -7,6 +7,7 @@ import { Bookstore } from "../pages/bookstore";
 import { Cart } from "../pages/Cart/index";
 import { Login } from "../pages/Login/index";
 import { Registration } from "../pages/Registration/index";
+import { User } from "../pages/User/index"
 import { useContext } from "react";
 
 export function Router() {
@@ -23,6 +24,7 @@ export function Router() {
                 <Route path="/cart" element={<Login />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/registration" element={<Registration />} />
+                <Route path="/user" element={<Home />} />
             </Routes>
         );
     }
@@ -35,6 +37,7 @@ export function Router() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Home />} />
             <Route path="/registration" element={<Home />} />
+            <Route path="/user" element={<User />} />
         </Routes>
     );
 }
